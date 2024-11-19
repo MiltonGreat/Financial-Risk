@@ -46,3 +46,7 @@ The dataset consists of 20,000 records of personal and financial data, including
 - **Model Improvement**: Try different models such as XGBoost, Logistic Regression, and Neural Networks to improve accuracy.
 - **Explainability**: Use SHAP or LIME for model interpretability, making the results more understandable for decision-makers.
 - **Deploying the Model**: The final model could be deployed in a real-world system to assist in loan approval processes.
+
+### Source
+
+https://www.kaggle.com/datasets/lorenzozoppelletto/financial-risk-for-loan-approval
