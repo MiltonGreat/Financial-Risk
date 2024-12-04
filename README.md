@@ -2,12 +2,14 @@
 
 ### Overview
 
-This project aims to assess and mitigate risks associated with lending by predicting loan defaults and approvals using machine learning.
+The aim of this project is to analyze and predict loan approvals while assessing financial risks associated with borrowers. This involves creating a classification model that predicts whether a loan will be approved (binary classification).
 
 #### Goals
 
-1. **Risk Score Regression:** Predict a continuous risk score associated with the likelihood of loan default or financial instability.
-2. **Binary Classification:** Predict loan approval (approved/denied).
+- Clean and preprocess financial and demographic data.
+- Engineer meaningful features for better predictive performance.
+- Train and evaluate machine learning models.
+- Interpret the results to support decision-making in financial risk management.
     
 ### Dataset
 
@@ -35,11 +37,38 @@ The dataset consists of 20,000 records of personal and financial data, including
 - **LoanApproved:** Binary outcome variable indicating whether the loan was approved (1) or denied (0).
 - **RiskScore:** A risk assessment score for each applicant.
 
-### Challenges and Limitations
+### Pipeline
 
-- **Imbalanced Classes**: The loan approval status (LoanApproved) is imbalanced, with more denials than approvals. We handle this through resampling techniques like SMOTE, but it still affects model performance.
-- **Feature Correlation**: Some features like AnnualIncome and MonthlyIncome might be highly correlated, which could impact the model’s predictive performance.
-- **Interpretability**: While Random Forest provides good accuracy, its interpretability is limited compared to simpler models, which could be important for understanding loan decisions.
+#### Data Preprocessing
+
+- Handled missing values by filling numerical columns with median values and categorical columns with mode.
+- Converted date columns into meaningful numeric features (e.g., year, month).
+- One-hot encoded categorical variables.
+- Standardized numerical features using StandardScaler.
+
+#### Feature Engineering
+
+Created new features such as:
+- DebtToIncomeRatio: Ratio of monthly debt payments to annual income.
+- NetWorth: Total assets minus total liabilities.
+
+#### Model Training
+
+- Split the data into training (80%) and testing (20%) sets.
+- Trained a Random Forest Classifier with balanced class weights to handle class imbalance.
+
+#### Model Evaluation
+
+Evaluated the model using metrics:
+- Accuracy: 92.33%
+- Precision, Recall, F1-score: Detailed in the classification report.
+- ROC-AUC: Assessed model performance on the probability predictions.
+
+#### Key Insights
+
+- High precision for approved loans (1), making the model suitable for reducing false positives in financial risk assessment.
+- High recall for non-approved loans (0), ensuring fewer risky approvals.
+- The DebtToIncomeRatio and NetWorth were significant features influencing loan approval predictions.
 
 ### Future Work
 
