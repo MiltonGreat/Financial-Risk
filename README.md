@@ -1,4 +1,4 @@
-# Financial Risk Assessment and Loan Approval Modeling
+# Financial Risk for Loan Approval
 
 ### Overview
 
