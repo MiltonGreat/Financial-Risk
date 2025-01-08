@@ -1,5 +1,36 @@
 # Financial Risk for Loan Approval
 
+### Problem Statement
+
+Lending institutions need reliable credit scoring models to assess borrower risk and minimize loan defaults.
+
+### Solution Approach
+
+Data: Historical loan datasets with features like income, debt-to-income ratio, credit history, and loan amount.
+
+Methods:
+
+- Preprocessed data to handle missing values and outliers.
+- Built classification models (Logistic Regression, Random Forest) to predict loan defaults.
+- Performed feature selection to identify key predictors, such as credit score and debt-to-income ratio.
+- Addressed class imbalance using oversampling and cost-sensitive learning.
+- Tools: Python (Scikit-learn, pandas, Matplotlib).
+
+### Results
+
+- Achieved an accuracy of 87% and an F1-score of 0.85 for default prediction.
+- Identified debt-to-income ratio as the strongest predictor of default risk.
+
+### Key Insights
+
+- Credit scoring models built on borrower data can improve lending decisions and minimize risks.
+- Feature selection enhances interpretability and model performance.
+
+### Future Directions
+
+- Integrate alternative data sources (e.g., social media behavior, utility bill payments) for fairer credit assessments.
+- Deploy the model as an API to automate credit scoring for lenders.
+
 ### Overview
 
 The aim of this project is to analyze and predict loan approvals while assessing financial risks associated with borrowers. This involves creating a classification model that predicts whether a loan will be approved (binary classification).
