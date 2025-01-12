@@ -66,7 +66,7 @@ The dataset consists of 20,000 records of personal and financial data, including
 - Feature Insights: Debt-to-income ratio and net worth were critical indicators of loan approval.
 - Risk Assessment: The model helps lenders assess financial risk by identifying high-risk applicants based on predictive features.
 
-# Example Prediction
+##### Example Prediction
 - Patient Info: Applicant aged 32 with an annual income of $50,000, debt-to-income ratio of 0.35, and a credit score of 720.
 - Prediction: The model classified this applicant as likely to have their loan approved (1).
     
