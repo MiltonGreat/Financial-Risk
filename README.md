@@ -4,10 +4,6 @@
 
 Lending institutions require effective credit scoring models to assess borrower risk and minimize loan defaults. This project applies machine learning techniques to predict loan defaults based on borrower data. By leveraging classification models such as Logistic Regression and Random Forest, we aim to provide accurate and timely predictions to assist financial institutions in making informed lending decisions. The Random Forest model achieved an accuracy of 92.33%, identifying key risk factors like debt-to-income ratio and net worth to minimize loan default risks.
 
-### Problem Statement
-
-Lending institutions face the challenge of evaluating borrower risk to avoid loan defaults. Traditional credit scoring models may not always be reliable, especially for borrowers with limited credit history. This project aims to develop a machine learning-based solution to predict loan defaults using personal and financial data, enabling lenders to make informed decisions and reduce the risk of loan defaults.
-
 ### Dataset
 
 The dataset consists of 20,000 records of personal and financial data, including columns such as:
@@ -33,6 +29,17 @@ The dataset consists of 20,000 records of personal and financial data, including
 - **DebtToIncomeRatio:** Ratio of the applicant’s debt to income.
 - **LoanApproved:** Binary outcome variable indicating whether the loan was approved (1) or denied (0).
 - **RiskScore:** A risk assessment score for each applicant.
+
+### Problem Statement
+
+Loan approval systems powered by AI can significantly impact individuals' financial opportunities. However, biases in datasets and algorithms can result in unfair decisions, disproportionately disadvantaging underrepresented groups.
+
+The project addresses the dual challenge of:
+
+- Developing accurate predictive models for loan approvals.
+- Ensuring fairness by mitigating biases related to sensitive attributes such as gender, race, and socioeconomic status.
+
+The ultimate goal is to create a model that aligns with ethical standards, enabling fair and equitable decision-making in financial systems.
 
 ### Solution Approach
 
@@ -62,25 +69,19 @@ The dataset consists of 20,000 records of personal and financial data, including
 
 ### Key Findings
 
-- Model Performance: Random Forest provided the best performance with an accuracy of 92.33% and strong precision and recall metrics for both loan approval and rejection.
-- Feature Insights: Debt-to-income ratio and net worth were critical indicators of loan approval.
-- Risk Assessment: The model helps lenders assess financial risk by identifying high-risk applicants based on predictive features.
+Bias Mitigation:
+- Adversarial debiasing significantly reduced bias, resulting in more equitable decision-making.
+- Reweighting improved fairness without sacrificing predictive accuracy.
 
-##### Example Prediction
-- Patient Info: Applicant aged 32 with an annual income of $50,000, debt-to-income ratio of 0.35, and a credit score of 720.
-- Prediction: The model classified this applicant as likely to have their loan approved (1).
+Model Performance:
+- Random Forest achieved the highest accuracy and AUC while maintaining fairness.
+- Logistic Regression provided interpretable results but required additional fairness adjustments.
+
+Fairness Metrics:
+- Demographic parity improved across all models, with fairness constraints ensuring equitable treatment.
+- Equalized odds showed balanced false positive and negative rates, particularly in Random Forest and Gradient Boosting models.
     
 ### Future Directions
-
-- Integrate alternative data sources (e.g., social media behavior, utility bill payments) for fairer credit assessments.
-- Deploy the model as an API to automate credit scoring for lenders.
-
-### Challenges
-
-- Class Imbalance: The dataset contained imbalanced classes, with more loan approvals than denials. This was addressed using oversampling techniques to ensure balanced predictions.
-- Feature Selection: Carefully selected features to avoid overfitting and improve model interpretability.
-
-### Future Work
 
 - **Model Improvement**: Try different models such as XGBoost, Logistic Regression, and Neural Networks to improve accuracy.
 - **Explainability**: Use SHAP or LIME for model interpretability, making the results more understandable for decision-makers.
